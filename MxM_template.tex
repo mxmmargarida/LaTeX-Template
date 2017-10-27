@@ -1,0 +1,208 @@
+\documentclass[mathserif,xcolor]{beamer}
+\usepackage{beamerthemesplit}
+
+
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{mybox}[2][]{%
+    colback=bg, 
+    colframe=blue!75!black,
+    fonttitle=\bfseries,
+    coltitle=blue!75!black, 
+    colbacktitle=bg,
+    enhanced,
+    attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+  title=#2,
+  #1}
+
+
+\makeatletter
+	\newcommand\tinyv{\@setfontsize\tinyv{0.1pt}{0.1}}
+\makeatletter
+
+
+\usepackage{colortbl}
+\usepackage{tabularx}
+
+
+
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+
+\usepackage[english]{babel}
+
+
+
+
+\usetheme{Montpellier}
+
+\definecolor{OtherBlue}{rgb}{0, 0.6,0.729}
+
+\definecolor{CERCBlue}{rgb}{0,0.6,0.6}
+
+
+\definecolor{CERCPurple}{rgb}{0.2,0.4,0.8}
+\definecolor{CERCGreen}{rgb}{0,0.6,0.4}
+
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{block body}{bg=Geycolor}
+\setbeamercolor{block title}{bg=CERCBlue,fg=white}
+\usecolortheme[rgb={0, 0.6,0.729}]{structure}
+\setbeamercolor{title in head/foot}{bg=OtherBlue}
+\setbeamercolor{section in head/foot}{bg=CERCBlue}
+\setbeamercolor{subsection in head/foot}{bg=CERCPurple}
+
+\setbeamercolor{author in head/foot}{bg=black}
+
+
+
+
+\usepackage{fontspec}%	
+\usefonttheme{professionalfonts}
+\usepackage{arydshln}
+
+% numbering on figures and tables
+\setbeamertemplate{caption}[numbered]
+
+% Title font 
+\newfontfamily\Light{Source Sans Pro Light}%
+
+
+% Title font for frames
+\newfontfamily\Regular{Source Sans Pro}%
+
+\newfontfamily\Bold{Source Sans Pro Bold}%
+
+
+
+\setsansfont{Source Sans Pro}%
+
+
+\setmonofont[Scale=MatchLowercase]{Source Code Pro}%
+
+\setbeamerfont{title}{family=\Light,size=\fontsize{20}{20}}
+\setbeamerfont{subtitle}{family=\Light,size=\fontsize{14}{16}}
+\setbeamerfont{date}{size=\fontsize{10}{12}}
+\setbeamerfont{author}{size=\fontsize{14}{14}}
+\setbeamerfont{institute}{size=\fontsize{8}{10}}
+\setbeamerfont{section title}{size=\LARGE}
+\setbeamerfont{frametitle}{family=\Regular,size=\Large}
+\setbeamerfont{block title}{family=\Regular,size=\large}
+\setbeamerfont{caption name}{family=\Regular}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareFontFamily{OT1}{pzc}{}
+\DeclareFontShape{OT1}{pzc}{m}{it}{<-> s * [0.900] pzcmi7t}{}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\def\pzc#1{\mathpzc{#1}}
+\def\scr#1{\mathscr{#1}}
+\def\sf#1{\mathsf{#1}}
+\def\bb#1{\mathbb{#1}}
+\def\cal#1{\mathcal{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor{section in toc}{fg=CERCPurple}
+\setbeamercolor{subsection in toc}{fg=red}
+
+\setbeamertemplate{section in toc}{%
+  {\color{CERCPurple}\inserttocsectionnumber.}
+  \inserttocsection}
+\setbeamercolor{subsection in toc}{bg=white,fg=structure}
+\setbeamertemplate{subsection in toc}{%
+  \hspace{1.2em}{\color{CERCPurple}\rule[0.3ex]{3pt}{3pt}}
+  \inserttocsubsection\par}
+
+
+
+\title{Title}
+
+\author[Author Presenting \hspace{0.8cm} email] % (optional, use only with lots of authors)
+{\footnotesize
+\textbf{Author(s) Name(s)}\\
+{\tiny Affiliation}
+} 
+
+
+\date{Date\\
+
+}
+
+
+\AtBeginSection[]
+{
+%\setbeamertemplate{section in toc}[circle]
+  \begin{frame}
+  \frametitle{Contents}
+  \begin{columns}[t]
+  \begin{column}{.5\textwidth}
+  \tableofcontents[currentsection,sections={1-2}]
+  \end{column}
+		\begin{column}{.5\textwidth}
+           \tableofcontents[currentsection,sections={3-4}]
+        \end{column}
+        \end{columns}
+  \end{frame}
+}
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+\frame{
+%\setbeamertemplate{section in toc}[circle]
+\frametitle{Contents}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+			\tableofcontents[sections={1-2}]
+		\end{column}
+		\begin{column}{.5\textwidth}
+           \tableofcontents[sections={3-4}]
+        \end{column}
+\end{columns}
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introduction}
+
+\frame{
+}
+
+
+
+\section{Literature Review}
+
+\frame{
+}
+
+\section{On Going Work}
+
+\frame{
+}
+
+\section{Conclusions}
+
+\frame{
+}
+
+
+
+\end{document}
